@@ -1,0 +1,25 @@
+{
+  "name": "webpack-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --config webpack.config.js --mode=development --watch",
+    "prod": "webpack --config webpack.config.js --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bencoveney/webpack-workshop.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bencoveney/webpack-workshop/issues"
+  },
+  "homepage": "https://github.com/bencoveney/webpack-workshop#readme",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
