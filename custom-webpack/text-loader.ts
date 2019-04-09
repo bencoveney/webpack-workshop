@@ -1,4 +1,4 @@
-module.exports = function(content, map, meta) {
+export default function(content, map, meta) {
 	const transformedContent = escapeQuotes(wrapParagraphs(content));
 	return `module.exports = '${transformedContent}'`;
 };

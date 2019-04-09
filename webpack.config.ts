@@ -1,8 +1,8 @@
-const path = require('path');
+import path from 'path';
+import GoodJobPlugin from './custom-webpack/good-job-plugin';
+import webpack = require('webpack');
 
-const GoodJobPlugin = require('./custom-webpack/good-job-plugin');
-
-module.exports = {
+const config: webpack.Configuration = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
@@ -17,9 +17,12 @@ module.exports = {
     ]
   },
   resolveLoader: {
-    modules: ["node_modules", "custom-webpack"]
+    modules: ["node_modules", "custom-webpack"],
+    extensions: [".ts", ".js"]
   },
   plugins: [
     new GoodJobPlugin()
   ]
 };
+
+export default config;
