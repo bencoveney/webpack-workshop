@@ -43,8 +43,8 @@ node --inspect-brk ./node_modules/webpack/bin/webpack.js
 
 ## Ideas
 
-- **Loader (Easy)** - Pass a colour as an option to `good-job-loader` and colour the emitted text.
-- **Loader (Middle)** - Extend the `good-job-loader` to support markdown.
+- **Loader (Easy)** - Pass a colour as an option to `text-loader` and colour the emitted text.
+- **Loader (Middle)** - Extend the `text-loader` to support markdown.
 - **Loader (Hard)** - Create a loader that takes a JSON file as input and generates JavaScript based on the JSON data.
 - **Loader (Hard)** - Re-implement a loader from https://webpack.js.org/loaders/
 
