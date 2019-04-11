@@ -12,7 +12,12 @@ const config: webpack.Configuration = {
     rules: [
       {
         test: /\.txt$/,
-        use: 'text-loader'
+        use: [
+          {
+            loader: 'text-loader',
+            options: {}
+          }
+        ]
       }
     ]
   },
@@ -21,7 +26,7 @@ const config: webpack.Configuration = {
     extensions: [".ts", ".js"]
   },
   plugins: [
-    new GoodJobPlugin()
+    new GoodJobPlugin({})
   ]
 };
 

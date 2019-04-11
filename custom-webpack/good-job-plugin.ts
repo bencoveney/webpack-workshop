@@ -1,5 +1,11 @@
-export default class GoodJobPlugin {
-  apply(compiler) {
+import webpack = require("webpack");
+
+export interface Options {}
+
+export default class GoodJobPlugin implements webpack.Plugin {
+  constructor(private options: Options) {}
+
+  apply(compiler: webpack.Compiler) {
     compiler.hooks.done.tap("GoodJobPlugin", () => {
       console.log(`\n\n${pickRandom(compliments)}\n\n`);
     });
